@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, intial-scale=1, shrink-to-fit=no"> <!--Shrink to Fit = No added for proper responsive properties as per Bootstrap recommendation-->
+
+    <!-- Bootstrap Main and PlugIn Links -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!-- Links Needed for CSS Style Elements -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Vollkorn:700" rel="stylesheet">
+
+    <!-- Page Icon -->
+    <link rel="icon" type="image/png" href="assets/images/cowboy-hat.png"> 
+
+    <title>Far-East Showdown</title>
+
+</head>
+
+<body>
+    <section class="jumbotron text-center">
+            <h1>Kimchee Western Showdown</h1>
+            <h2>Choose a Fighter, Battle Each Foe, Defeat Them All and Win!</h2>
+    </section>
+
+<!---------------Player Character Selector---------------------->
+    <div class="container-fluid Fighter-Wrapper">
+        <div class="row"> 
+            <div class="col-sm-12">
+                <div class="card Card-Wrapper">
+                    
+                    <div class="Choose-Fighter">
+                        <h2 id="Messenger">Choose Your Fighter</h2>
+                    </div>
+
+                    <br>
+
+                    <div class="d-flex flex-row Character-Area" id="option-box">
+
+                        <div id="Good-Card" class="Char-Card">
+
+                            <div id="GdCardHd" class="card-header">
+                                <h3 class="card-name">The Good</h3>
+                            </div>
+
+                            <div class="Battle-Card">
+                                <button id="good" class="fighter" value="good"><img src="assets/images/The_Good_2.jpg" class="img-fluid"></button>
+                            </div>
+
+                            <div class="Card-Stats">
+                                <div class="Health-Symbol">&#10084; 
+                                    <p id="Good-Health">140</p>
+                                </div>
+    
+                                <div class="Attack-Symbol">&#9876;
+                                    <p id="Good-Attack">13</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br id="card-break">
+
+                        <div id="Bad-Card" class="Char-Card">
+
+                            <div class="card-header">
+                                <h3 class="card-name">The Bad</h3>
+                            </div>
+
+                            <div class="Battle-Card">
+                                <button id="bad" class="fighter" value="bad"><img  src="assets/images/The_Bad_2.png" class="img-fluid"></button>
+                            </div>
+
+                            <div class="Card-Stats">
+                                <div class="Health-Symbol">&#10084; 
+                                    <p id="Bad-Health">120</p>
+                                </div>
+    
+                                <div class="Attack-Symbol">&#9876;
+                                    <p id="Bad-Attack">17</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br id="card-break">
+
+                        <div id="Weird-Card" class="Char-Card">
+
+                            <div class="card-header">
+                                <h3 class="card-name">The Weird</h3>
+                            </div>
+
+                            <div class="Battle-Card">                        
+                                <button id="weird" class="fighter" value="weird" ><img src="assets/images/The_Weird_2.jpg" class="img-fluid"></button>
+                            </div>
+
+                            <div class="Card-Stats">
+                                <div class="Health-Symbol">&#10084; 
+                                    <p id="Weird-Health">180</p>
+                                </div>
+    
+                                <div class="Attack-Symbol">&#9876;
+                                    <p id="Weird-Attack">9</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <br id="card-break">                        
+
+                        <div id="Thugs-Card" class="Char-Card">
+
+                            <div class="card-header">
+                                <h3 class="card-name">The Thugs</h3>
+                            </div>
+
+                            <div class="Battle-Card">                        
+                                <button id="thugs" class="fighter" value= "thugs"><img src="assets/images/The_Thugs.jpg" class="img img-fluid"></button>
+                            </div>
+
+                            <div class="Card-Stats">
+                                <div class="Health-Symbol">&#10084; 
+                                    <p id="Thugs-Health">220</p>
+                                </div>
+    
+                                <div class="Attack-Symbol">&#9876;
+                                    <p id="Thugs-Attack">7</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+  <!--------------------------Bad Guy Selector--------------->
+
+    <div class="container-fluid BadGuy-Wrapper">
+        <div class="row"> 
+            <div class="col-sm-12">
+                <div class="card Card-Wrapper">
+
+                    <div class="d-flex flex-row BadGuy-Area" id="BG-box">
+
+                        <div id="BadGuy-box" class= "card hidden">
+                            <div class="Choose-Fighter">
+                                <h2 id="Messenger">Choose Your Foe</h2>
+                            </div>
+
+                            <div id="BadGuy-CardHeader">
+                            </div>
+
+                            <div id="BadGuy-body" class="card-body">
+                            </div>
+                        </div>
+
+                    </div>
+                
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+                    
+    <br>
+  <!---------------------Battle Board Area------------------>
+    <div class="container-fluid BattleBoard-Wrapper">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="card Card-Wrapper">
+
+                    <div class="d-flex flex-row BattleBoard-Area" id="BB-box">
+
+                        <!-----Player Battle Card----->
+                        <div id="player-box" class= "card hidden">
+                            <div class="card-header">
+                                <h4 class="card-title">Player</h4>
+                            </div>
+
+                            <div id="player-body" class="card-body">
+                            </div>
+
+                            <div class="card-footer"> 
+                                <div id="player-heart">&#10084; 
+                                <p id="player-health">  </p>
+                                </div>
+
+                                <!-- <div id="player-sword">&#9876;
+                                <p id="player-attack">  </p>
+                                </div> -->
+                            </div>
+                        </div>
+
+                        <!---Battle Message Area------------->
+                        <div class="text-center battle-box hidden">
+
+                            <br>
+
+                            <div id="attack-button">
+                            </div>
+
+                            <hr>
+
+                            <div id="attack-nar">
+                            </div>
+
+                            <hr>
+
+                            <div id="message-box">
+                            </div>
+
+                            <hr>
+                            
+                            <div id="restart">
+                            </div>
+
+                        </div> 
+
+                            <!-----------Foe Battle Card ------>
+
+                        <div id="foe-box" class= "card hidden">
+                            <div class="card-header">
+                                <h4 class="card-title">Foe</h4>
+                            </div>
+
+                            <div id="foe-body" class="card-body">
+                            </div>
+
+                            <div class="card-footer"> 
+                                <div id="foe-heart">&#10084; 
+                                <p id="foe-health">  </p>
+                                </div>
+
+                                <!-- <div id="foe-sword">&#9876;
+                                <p id="foe-counter"></p>
+                                </div> -->
+
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script
+    src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+</body>
+
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+</html>
