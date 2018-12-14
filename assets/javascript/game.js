@@ -128,6 +128,8 @@ $(document).ready(function () {
     }
 
     function youWon() {
+        $("#Messenger").addClass("hidden");
+        $("#BadGuy-box").addClass("hidden");
         $("#attack-nar").empty();
         $("#message-box").text("You have vanquished all foes! You win!");
         makeRestartBtn();
